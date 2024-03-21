@@ -27,17 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Push notification
-        uses: shink/bark-action@v2
+        uses: liyaojian/bark-action@master
         with:
-          key: ${{ secrets.KEY }}       # Your secret key, it is required
-          host: ${{ secrets.HOST }}     # Your Bark host, the default is 'https://api.day.app'
+          key: ${{ secrets.BARK_KEY }}       # Your secret key, it is required
+          host: ${{ secrets.BARK_HOST }}     # Your Bark host, the default is 'https://api.day.app'
           title: Message title
           body: Message body
-          sound: alarm
-          isArchive: 1
-          url: https://yuanhaoji.com
-          automaticallyCopy: 1
-          copy: Content copied to clipboard
+          url: https://github.com
 ```
 
 > Among them, only the `key` field is required.

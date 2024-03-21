@@ -18,7 +18,7 @@ else
 fi
 
 request_url="${host}/${INPUT_KEY}/"
-request_body="title=${INPUT_TITLE}&body=${INPUT_BODY}&sound=${INPUT_SOUND}&isArchive=${INPUT_IS_ARCHIVE}&url=${INPUT_URL}&automaticallyCopy=${INPUT_AUTOMATICALLY_COPY}&copy=${INPUT_COPY}"
+request_body="title=${INPUT_TITLE}&body=${INPUT_BODY}&url=${INPUT_URL}&level=timeSensitive"
 
 echo -e "${cyan}Request url${none}: ${request_url}"
 echo -e "${cyan}Request body${none}:\n${request_body//&/\\n}"

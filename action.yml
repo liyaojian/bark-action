@@ -1,6 +1,6 @@
 name: 'Bark Action'
 description: 'An action for bark'
-author: 'Yuanhao Ji <jiyuanhao@apache.org>'
+author: 'Yaojian Li'
 branding:
   icon: 'message-circle'
   color: 'red'
@@ -17,20 +17,8 @@ inputs:
   body:
     description: Message body
     required: false
-  sound:
-    description: Message sound
-    required: false
-  isArchive:
-    description: Whether to archive this message
-    required: false
   url:
     description: URL to redirect
-    required: false
-  automaticallyCopy:
-    description: Whether to copy this message automatically
-    required: false
-  copy:
-    description: Content copied to clipboard
     required: false
 runs:
   using: "composite"
@@ -43,8 +31,4 @@ runs:
         INPUT_HOST: ${{ inputs.host }}
         INPUT_TITLE: ${{ inputs.title }}
         INPUT_BODY: ${{ inputs.body }}
-        INPUT_SOUND: ${{ inputs.sound }}
-        INPUT_IS_ARCHIVE: ${{ inputs.isArchive }}
         INPUT_URL: ${{ inputs.url }}
-        INPUT_AUTOMATICALLY_COPY: ${{ inputs.automaticallyCopy }}
-        INPUT_COPY: ${{ inputs.copy }}
