@@ -18,7 +18,7 @@ else
 fi
 
 request_url="${host}/${INPUT_KEY}/"
-request_body="title=${INPUT_TITLE}&body=${INPUT_BODY}&url=${INPUT_URL}&level=timeSensitive"
+request_body="title=${INPUT_TITLE}&body=${INPUT_BODY}&url=${INPUT_URL}&group=action&level=timeSensitive"
 
 echo -e "${cyan}Request url${none}: ${request_url}"
 echo -e "${cyan}Request body${none}:\n${request_body//&/\\n}"
